@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ansifuzz"
+version = "1.0.0"
+description = "Fuzzy-search CLI wrappers for ansible-playbook and ansible ad-hoc"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Chris van Meer", email = "chris@atcomputing.nl" }
+]
+keywords = ["ansible", "fzf", "fuzzy", "cli", "devops"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+ap = "ansifuzz.ap:main"
+aa = "ansifuzz.aa:main"
+
+[project.urls]
+Homepage = "https://github.com/chrisvanmeer/ansifuzz"
+Repository = "https://github.com/chrisvanmeer/ansifuzz"
+"Bug Tracker" = "https://github.com/chrisvanmeer/ansifuzz/issues"
+Changelog = "https://github.com/chrisvanmeer/ansifuzz/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ansifuzz*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
