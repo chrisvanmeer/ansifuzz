@@ -4,6 +4,12 @@ All notable changes to ansifuzz are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-04-16
+
+### Fixed
+- Bumped GitHub Actions to Node.js 24 compatible versions:
+  `actions/checkout@v4` → `@v5`, `actions/setup-python@v5` → `@v6`
+
 ## [1.1.0] - 2025-04-15
 
 ### Added

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ansifuzz"
-version = "1.1.0"
+version = "1.1.1"
 description = "Fuzzy-search CLI wrappers for ansible-playbook and ansible ad-hoc"
 readme = "README.md"
 license = { file = "LICENSE" }
